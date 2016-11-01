@@ -1,0 +1,18 @@
+myserver:
+  port: 8081
+  contextPath: /rest
+
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: true
+    prefix: classpath:/templates/
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class: com.mysql.jdbc.Driver
+

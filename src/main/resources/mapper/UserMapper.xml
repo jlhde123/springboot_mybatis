@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jlh.mapper.UserMapper">
+    <resultMap id="baseResultMapper" type="com.jlh.model.User">
+        <result column="id" jdbcType="BIGINT" property="id"></result>
+        <result column="name" jdbcType="VARCHAR" property="name"></result>
+        <result column="age" jdbcType="INTEGER" property="age"></result>
+    </resultMap>
+
+    <select id="getUsers" resultMap="baseResultMapper">
+        SELECT  id,name,age from tb_user;
+    </select>
+</mapper>
